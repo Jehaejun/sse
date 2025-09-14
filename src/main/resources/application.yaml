@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sse-api
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+hiworks:
+  redis:
+    channels:
+      logout: ${spring.profiles.active}:sse:user:logout
